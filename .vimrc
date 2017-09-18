@@ -1,9 +1,25 @@
 set encoding=utf-8
 set nocompatible
 set showcmd                     " display incomplete commands
+set clipboard=unnamedplus       " copy to default system clipboard  
+
+set runtimepath^=~/.vim/plugin/slime.vim
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name":"default", "target_pane":"2"}
 
 " colors and theme
-colorscheme iceberg
+" set termguicolors
+" colorscheme iceberg
+" colorscheme elflord
+
+" splits
+nnoremap <C-J> <C-W><C-J>       " Navigate easily 
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow                  " open splits more naturally 
+set splitright
 
 " line numbers
 set number
@@ -20,7 +36,6 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 set incsearch                   " incremental searching
 set hlsearch                    " highlight matches
 "nnoremap <esc> :noh<return><esc>
-"autocmd TermResponse * nnoremap <esc> :noh<return><esc>
 
 "" LaTeX snippets
 
