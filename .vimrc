@@ -5,7 +5,7 @@ set clipboard=unnamedplus       " copy to default system clipboard
 
 set runtimepath^=~/.vim/plugin/slime.vim
 let g:slime_target = "tmux"
-let g:slime_default_config = {"socket_name":"default", "target_pane":"2"}
+" let g:slime_default_config = {"socket_name":"default", "target_pane":"2"}
 
 " colors and theme
 " set termguicolors
