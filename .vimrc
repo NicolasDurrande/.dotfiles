@@ -5,15 +5,27 @@ set clipboard=unnamedplus       " copy to default system clipboard
 
 set wrap linebreak nolist       " wrap long lines
 set scrolloff=10
+filetype off                 " required
 
 set runtimepath^=~/.vim/plugin/slime.vim
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name":"default", "target_pane":"0"}
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.dotfiles/.vim/bundle/Vundle.vim
+call vundle#begin('~/.dotfiles/.vim/bundle/')
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim',
+Plugin 'jpalardy/vim-slime'
+Plugin 'davidhalter/jedi-vim',            " Python
+Plugin 'lervag/vimtex',                   " Latex
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+
 " colors and theme
-" set termguicolors
-" colorscheme iceberg
-" colorscheme elflord
+"colorscheme iceberg
+colorscheme elflord
 
 " splits
 nnoremap <C-J> <C-W><C-J>       " Navigate easily 
