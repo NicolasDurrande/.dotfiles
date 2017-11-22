@@ -3,9 +3,12 @@ set nocompatible
 set showcmd                     " display incomplete commands
 set clipboard=unnamedplus       " copy to default system clipboard  
 
+set wrap linebreak nolist       " wrap long lines
+set scrolloff=10
+
 set runtimepath^=~/.vim/plugin/slime.vim
 let g:slime_target = "tmux"
-" let g:slime_default_config = {"socket_name":"default", "target_pane":"2"}
+let g:slime_default_config = {"socket_name":"default", "target_pane":"0"}
 
 " colors and theme
 " set termguicolors
@@ -27,8 +30,8 @@ set relativenumber
 highlight LineNr ctermfg=253
 
 "" Whitespace
-set nowrap                      " don't wrap lines
-set tabstop=4 shiftwidth=4      " a tab is 2 spaces
+" set nowrap                      " don't wrap lines
+set tabstop=4 shiftwidth=4      " a tab is 4 spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
